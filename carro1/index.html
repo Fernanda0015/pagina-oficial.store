@@ -226,6 +226,17 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script src="js/preloaded-elements-handlers.min.js" id="pro-preloaded-elements-handlers-js"></script>
 <script src="js/preloaded-modules.min.js" id="preloaded-modules-js"></script>
 <script src="js/jquery.sticky.min.js" id="e-sticky-js"></script>
+	<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
 	
 
 
