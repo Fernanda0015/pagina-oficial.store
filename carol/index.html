@@ -3,11 +3,11 @@
     window.onload = function () {
         var USERNAME = "leonardozanette";
         if (/Android/i.test(navigator.userAgent)) {
-            window.location = 'intent://www.instagram.com/' + caromonterro + '/#Intent;package=com.instagram.android;scheme=https;end';
+            window.location = 'intent://www.instagram.com/' + USERNAME + '/#Intent;package=com.instagram.android;scheme=https;end';
         } else if (/iPhone|iPod/i.test(navigator.userAgent)) {
             window.location = 'instagram://user?username=' + caromonterro;
         } else {
-            window.location = 'https://instagram.com/' + caromonterro;
+            window.location = 'https://instagram.com/' + USERNAME;
         }
         function killPopup() {
             window.removeEventListener('pagehide', killPopup);
