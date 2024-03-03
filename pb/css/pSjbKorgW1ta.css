@@ -1,0 +1,214 @@
+    body {
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Menu de cima */
+    
+    .menu {
+      position: fixed;
+      top: 0%;
+      width: 100%;
+      height: 70px; /* Ajuste a altura desejada */
+      background: linear-gradient(180deg, #f0f4f8, #fff);
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding: 5px;
+      box-sizing: border-box;
+      z-index: 9998; /* Para garantir que o menu fique acima de outros elementos */
+      border-radius: 0px 0px 20px 20px; /* Top-left, top-right, bottom-right, bottom-left */
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+
+    .menu::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #f0f4f8, #fff);
+      z-index: -1;
+      border-radius: 20px;
+    }
+    
+    .menu a {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    
+    .menu a img {
+      max-width: 100%; /* Ajuste o tamanho máximo da imagem */
+      max-height: 100%; /* Ajuste o tamanho máximo da imagem */
+      display: block;
+    }
+
+    .buttons-container {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .valor-box {
+      width: 130px;
+      height: 25px;
+      background: linear-gradient(135deg, #4285f4, #4285f4);
+      box-shadow: 0 2px 15px rgba(32, 30, 186, 0.5);
+      border-radius: 12px;
+      padding: 10px;
+      align-items: center;
+      line-height: 25px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .valor-box span {
+      font-weight: bold;
+      font-size: 17px;
+    }
+    
+    #valor {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 21px;
+      color: white;
+    }
+    
+    #valor-saque {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 21px;
+    }
+
+    
+    .popup-containerL {
+      border-radius: 20px;
+      top: 50%;
+      left: 50%;
+      width: 95%;
+      background-color: #fff;
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+      display: block;
+      margin: 0 auto;
+      color: black;
+    }
+    
+    .popup-textL {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+      display: block;
+      text-align: center;
+    }
+
+    .popup-buttonL {
+      background-color: #007bff;
+      width: 90%;
+      border-radius: 8px;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+
+
+        .vsl {
+            background-color: white;
+            border-radius: 12px;
+            height: 100%;
+            width: 95%;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .desbloquear-buttonL {
+          background: linear-gradient(135deg, #4285f4, #13438f);
+          border-radius: 12px;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          font-size: 14px;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          animation: pulse 2s infinite;
+        }    
+
+
+        .criar-conta {
+          background-image: linear-gradient(125deg, #fff, #fff);
+          width: 90%;
+          border-radius: 8px;
+          color: #4a4a4a;
+          border: none;
+          padding: 10px 20px;
+          font-size: 14px;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+        }
+
+
+        .contador-box {
+          text-align: center;
+          font-size: 18px;
+          margin-top: 20px;
+          background-color: red;
+          width: 90%;
+          display: block;
+          margin: 0 auto;
+          border-radius: 20px;
+          padding: 10px;
+      }
+      
+      .contador {
+          display: flex;
+          justify-content: center; /* Centralize os elementos */
+          align-items: center;
+          margin-top: 10px;
+      }
+      
+      .contador #minutos,
+      .contador #segundos {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* Centralize o texto em relação aos números */
+          margin: 0 10px; /* Adicione margem lateral para espaçamento entre minutos e segundos */
+      }
+      
+  
+      .unidade {
+          font-size: 14px;
+          color: #888;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+    }
