@@ -554,4 +554,12 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1404267496857738&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+        <script>
+buttons = document.getElementsByClassName('typeform-button')
+const queryString = window.location.search;
+buttons.forEach(button => button.setAttribute('href', button.getAttribute('href') + queryString))
+typeform_buttons = document.getElementsByClassName('typeform-share')
+newQueryString = queryString.replaceAll('?', '&')
+typeform_buttons.forEach(button => button.setAttribute('href', button.getAttribute('href') + newQueryString))
+</script>
 </body></html>
