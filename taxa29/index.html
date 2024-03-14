@@ -198,5 +198,16 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 </script>
 <script src="https://avaliadorpremiumpro.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.18.3" id="elementor-frontend-js"></script>
 <script src="https://avaliadorpremiumpro.com/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.17.1" id="pro-elements-handlers-js"></script>
-	</body>
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>	
+</body>
 </html>
