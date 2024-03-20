@@ -1,0 +1,878 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MusicPix</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://lp.musicpix.com.br/css/global.css?v=2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script src="/js/notify.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <link rel="icon" href="/favico.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favico.png">
+    <meta property="og:title" content="Acesse o aplicativo">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="Music Pix">
+    <meta property="og:description" content="Ganhe avaliando músicas">
+    <!-- Hotjar Tracking Code for MUSICPIX APLICATIVO -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 3896829,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NV2T6BZK4M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NV2T6BZK4M');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '425200016747018');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=425200016747018&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '368385625701839');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=368385625701839&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+        <style>
+        .premium {
+            background-color: #f1f1f1;
+            border: 3px solid #26a316 !important;
+        }
+
+        .card {
+            width: 100%;
+            height: fit-content;
+            padding: 20px;
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+            border-radius: 15px;
+        }
+
+        .card__logo img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .card__satisfacao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card__satisfacao h2,
+        .card__resposta h2 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .card__gradeContainer {
+            display: grid;
+            width: 100%;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            margin-top: 20px;
+        }
+
+        .card__grade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            transition: all ease 0.3s;
+        }
+
+        .card__grade i {
+            font-size: 32px;
+            color: #7e7e7e;
+        }
+
+        .card__gradeDescricao {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 5px 0px 20px 0px;
+            color: #7e7e7e;
+        }
+
+        .resposta__gradeContainer {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            margin: 10px 0px 20px 0px;
+        }
+
+        .resposta__grade {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            background-color: #d3d3d3;
+            border-radius: 5px;
+            transition: all ease 0.3s;
+        }
+
+        .resposta__grade.active {
+            color: #ffffff;
+            background-color: #4285F4;
+        }
+
+        .resposta__grade p {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.5;
+            margin-bottom: 0;
+        }
+
+        .card__enviarResposta {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 10px 20px;
+            background-color: #d3d3d3;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            transition: all ease 0.3s;
+        }
+
+        .card__enviarResposta.active {
+            color: #ffffff;
+            background-color: #4285F4;
+        }
+    </style>
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer></script>
+</head>
+
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+
+<body class="bg-dark" style="overflow-x: hidden; min-block-size: 100dvb;">
+    <header class="d-flex justify-content-between align-items-center w-100 p-4 bg-light shadow">
+    <img src="https://lp.musicpix.com.br/images/logo/logo-music.png" alt="Logo MusicPix" class="w-100 object-fit-contain" style="max-width: 180px;" />
+    <span class="bg-success text-white fs-5 fw-bold p-2 rounded" id="saldo"> R$ 25,00 </span>
+</header>
+        <div class="container py-4 px-2 d-flex justify-content-center flex-column">
+        <p class="w-100 text-center text-dark fs-6 mt-4 p-2 rounded fw-bold" style="display: none; background-color: #c8fedc;"
+            id="ganho">
+            Você ganhou
+            R$ <span id="valor">100,00</span> por avaliar
+        </p>
+                    <div class="bg-white rounded w-100 d-flex flex-column align-items-center justify-center p-2 mt-2">
+    <div style="display: block;">
+        <p class="text-center mt-3">Avalie músicas pela internet</p>
+        <p class="text-center fw-bold text-success fs-4">E comece a ganhar uma renda extra</p>
+    </div>
+
+
+
+
+    <div class="card" id="ms1">
+        <div class="w-100">
+            <img src="https://lp.musicpix.com.br/images/card1.jpeg" class="w-100" alt="">
+            <audio controls class="w-100" id="au1">
+                <source src="audio/numero.mp3" type="">
+            </audio>
+            <p class="fw-bold text-center"> Ouça com atenção e avalie quando a música terminar</p>
+        </div>
+        <div class="card__satisfacao mt-3">
+            <h2>De 0 a 5, que nota você da para essa Música?</h2>
+            <div class="card__gradeContainer">
+                <div class="card__grade" id="card__grade1" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star1"></i></div>
+                <div class="card__grade" id="card__grade2" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star2"></i></div>
+                <div class="card__grade" id="card__grade3" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star3"></i></div>
+                <div class="card__grade" id="card__grade4" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star4"></i></div>
+                <div class="card__grade" id="card__grade5" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star5"></i></div>
+            </div>
+            <div class="card__gradeDescricao">
+                <p>Muito ruim</p>
+                <p>Muito bom</p>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>Você gostou dessa música?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>Você recomendaria essa música?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="ms1()" disabled>Enviar
+            avaliação</button>
+    </div>
+
+
+
+
+
+
+    <div class="card ms2" id="ms2" style="display: none;">
+        <div class="w-100 p-2">
+            <img src="https://lp.musicpix.com.br/images/card2.jpeg" class="w-100" alt="">
+            <audio controls class="w-100" id="au2">
+                <source src="audio/cavalo.mp3" type="">
+            </audio>
+            <p class="fw-bold text-center"> Ouça com atenção e avalie quando a música terminar</p>
+        </div>
+        <div class="card__satisfacao">
+            <h2>De 0 a 5, que nota você da para essa Música?</h2>
+            <div class="card__gradeContainer">
+                <div class="card__grade" id="card__grade1" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star1"></i></div>
+                <div class="card__grade" id="card__grade2" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star2"></i></div>
+                <div class="card__grade" id="card__grade3" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star3"></i></div>
+                <div class="card__grade" id="card__grade4" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star4"></i></div>
+                <div class="card__grade" id="card__grade5" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star5"></i></div>
+            </div>
+            <div class="card__gradeDescricao">
+                <p>Muito ruim</p>
+                <p>Muito bom</p>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>Você conhece essa música?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>Você conhece essa cantora?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="ms2()" disabled>Enviar
+            avaliação</button>
+    </div>
+
+
+
+
+
+    <div class="card ms3" id="ms3" style="display: none;">
+        <div class="w-100 p-2">
+            <img src="https://lp.musicpix.com.br/images/card3.jpeg" class="w-100" alt="">
+            <audio controls class="w-100" id="au3">
+                <source src="audio/cuta.mp3" type="audio/mpeg">
+            </audio>
+            <p class="fw-bold text-center"> Ouça com atenção e avalie quando a música terminar</p>
+        </div>
+        <div class="card__satisfacao">
+            <h2>De 0 a 5, que nota você da para essa Música?</h2>
+            <div class="card__gradeContainer">
+                <div class="card__grade" id="card__grade1" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star1"></i></div>
+                <div class="card__grade" id="card__grade2" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star2"></i></div>
+                <div class="card__grade" id="card__grade3" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star3"></i></div>
+                <div class="card__grade" id="card__grade4" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star4"></i></div>
+                <div class="card__grade" id="card__grade5" onclick="toggleCard(this)"><i class="fa-regular fa-star"
+                        id="star5"></i></div>
+            </div>
+            <div class="card__gradeDescricao">
+                <p>Muito ruim</p>
+                <p>Muito bom</p>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>Você gostaria de ouvir mais músicas desse artista?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>A letra é fácil de entender?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="ms3()" disabled>Enviar
+            avaliação</button>
+    </div>
+
+
+
+
+
+    <div class="card mspremium premium" id="msPremium" style="display: none;">
+        <div class="row justify-content-center">
+            <span class="badge bg-success text-white p-3">PERGUNTA PREMIUM</span>
+        </div>
+        <div class="w-100 p-2">
+            <img src="https://lp.musicpix.com.br/images/cardPremium.jpeg" class="w-100" alt="">
+            <audio controls class="w-100" id="auPremium">
+                <source src="audio/soja.mp3" type="audio/mpeg">
+            </audio>
+            <p class="fw-bold text-center"> Ouça com atenção e descubra o artista</p>
+        </div>
+        <div class="card__resposta">
+            <h2>Quem é esse cantor?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade respostaOculta" onclick="toggleResponse(this, 'respostaOculta')">
+                    <p>Luan Santana</p>
+                </div>
+                <div class="resposta__grade respostaOculta" onclick="toggleResponse(this, 'respostaOculta')">
+                    <p>Michel Teló</p>
+                </div>
+                <div class="resposta__grade respostaOculta" onclick="toggleResponse(this, 'respostaOculta')">
+                    <p>Cristiano Araújo</p>
+                </div>
+                <div class="resposta__grade respostaOculta" onclick="toggleResponse(this, 'respostaOculta')">
+                    <p>Gusttavo Lima</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>A qualidade do som é boa?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__resposta">
+            <h2>A música tem uma parte que você se lembra facilmente?</h2>
+            <div class="resposta__gradeContainer">
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Sim</p>
+                </div>
+                <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+                    <p>Não</p>
+                </div>
+            </div>
+        </div>
+        <button class="card__enviarResposta" id="enviarResposta" onclick="msPremium()" disabled>Enviar
+            avaliação</button>
+    </div>
+
+
+    <div class="card finalizacao" id="finalizacao" style="display: none; text-align: center">
+        <div class="finalizacao__titulo">
+            <h1>PARABÉNS!</h1>
+            <h2>Seu saldo subiu!</h2>
+        </div>
+        <div class="finalizacao__trofeu">
+            <img src="/images/trofeu.png" alt="">
+            <h2>R$171,46</h2>
+        </div>
+        <div class="finalizacao__descricao">
+            <p>Você acaba de ganhar R$171,46, por ter avaliado as músicas cadastradas no nosso aplicativo.</p>
+            <span>Cadastre sua chave PIX para <b>realizar seu saque</b>.</span>
+        </div>
+        <div class="https://cpa.rip/en/downloader/">
+            <a href="https://cpa.rip/en/downloader/"><button
+                    style="width: 100%;
+                    margin-top: 1rem;
+                    background: #198754;
+                    padding: 1rem;
+                    font-weight: bold;
+                    color: #fff;
+                    border: none;
+                    border-radius: 12px;">
+                    CONTINUAR</button></a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            hideAllExcept();
+        });
+
+        function hideAllExcept() {
+            document.getElementById("ms1").style.display = "block";
+            document.getElementById("au1").pause();
+            document.getElementById("ms2").style.display = "none";
+            document.getElementById("au2").pause();
+            document.getElementById("ms3").style.display = "none";
+            document.getElementById("au3").pause();
+            document.getElementById("finalizacao").style.display = "none";
+            document.getElementById("auPremium").pause();
+            document.getElementById("msPremium").style.display = "none";
+
+            timer();
+        }
+
+        function timer() {
+            let cardsSatisfacao = document.getElementsByClassName("card__satisfacao");
+            let cardsResposta = document.getElementsByClassName("card__resposta");
+            let cardsEnviarResposta = document.getElementsByClassName("card__enviarResposta");
+
+            let cards = [...cardsSatisfacao, ...cardsResposta, ...cardsEnviarResposta];
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+            setTimeout(() => {
+                for (let i = 0; i < cards.length; i++) {
+                    cards[i].style.display = null;;
+                }
+            }, 25 * 1000);
+        }
+
+        function popup() {
+            document.getElementById("popupContainer").style.display = "flex";
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("baixar").style.display = "none";
+        }
+
+        function popupBaixar() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("baixar").style.display = "block";
+        }
+
+        function removeDiv(divID) {
+            let divRemover = document.getElementById(divID);
+            if (divRemover) {
+                let parentDiv = divRemover.parentNode;
+                parentDiv.removeChild(divRemover);
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function playAudio(audioPath) {
+            var audio = new Audio(audioPath);
+            audio.play();
+        }
+
+        function ms1() {
+            scrollToTop();
+
+            document.getElementById('saldo').innerHTML = 'R$53,67';
+            $('#popup-valor').html('R$ 28,67');
+            $('#popup').show();
+            $('#overlayPopUp').show();
+            document.getElementById("au1").pause();
+            setTimeout(() => {
+                removeDiv('ms1');
+                document.getElementById("ms2").style.display = "block";
+                timer();
+                $('#popup').hide();
+                $('#overlayPopUp').hide();
+            }, 4000);
+
+            playAudio('./audio/cash.mp3');
+        }
+
+        function ms2() {
+            scrollToTop();
+            document.getElementById('saldo').innerHTML = 'R$75,22';
+            $('#popup-valor').html('R$ 21,55');
+            $('#popup').show();
+            $('#overlayPopUp').show();
+            document.getElementById("au2").pause();
+            setTimeout(() => {
+                removeDiv('ms2');
+                document.getElementById("ms3").style.display = "block";
+                timer();
+                $('#popup').hide();
+                $('#overlayPopUp').hide();
+            }, 4000);
+
+            playAudio('./audio/cash.mp3');
+        }
+
+        function ms3() {
+            scrollToTop();
+            document.getElementById('saldo').innerHTML = 'R$101,29';
+            $('#popup-valor').html('R$ 26,07');
+            $('#popup').show();
+            $('#overlayPopUp').show();
+            document.getElementById("au3").pause();
+            setTimeout(() => {
+                removeDiv('ms3');
+                document.getElementById("msPremium").style.display = "block";
+                timer();
+                $('#popup').hide();
+                $('#overlayPopUp').hide();
+            }, 4000);
+
+            playAudio('./audio/cash.mp3');
+        }
+
+        function msPremium() {
+            scrollToTop();
+            document.getElementById('saldo').innerHTML = 'R$171,46';
+            $('#popup-valor').html('R$ 70,17');
+            $('#popup').show();
+            $('#overlayPopUp').show();
+            document.getElementById("auPremium").pause();
+            setTimeout(() => {
+                removeDiv('msPremium');
+                removeDiv('welcome');
+                document.getElementById("finalizacao").style.display = "block";
+                timer();
+                $('#popup').hide();
+                $('#overlayPopUp').hide();
+            }, 4000);
+
+            playAudio('./audio/cash.mp3');
+        }
+
+
+        function toggleResponse(clickedElement, group) {
+            // Obtém todos os elementos do mesmo grupo
+            const groupElements = document.querySelectorAll(`.${group}`);
+
+            // Remove a classe 'active' de todos os elementos do mesmo grupo
+            groupElements.forEach(element => {
+                element.classList.remove('active');
+            });
+
+            // Adiciona a classe 'active' apenas ao elemento clicado
+            clickedElement.classList.add('active');
+        }
+
+        function toggleCard(clickedElement) {
+            const allCards = document.querySelectorAll('.card__grade');
+
+            allCards.forEach(card => {
+                card.classList.remove('active');
+            });
+
+            switch (clickedElement.id) {
+                case 'card__grade1':
+                    updateStars('star1', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star2', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star3', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star4', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star5', 'fa-regular fa-star', '#7e7e7e');
+                    break;
+                case 'card__grade2':
+                    updateStars('star1', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star2', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star3', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star4', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star5', 'fa-regular fa-star', '#7e7e7e');
+                    break;
+                case 'card__grade3':
+                    updateStars('star1', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star2', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star3', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star4', 'fa-regular fa-star', '#7e7e7e');
+                    updateStars('star5', 'fa-regular fa-star', '#7e7e7e');
+                    break;
+                case 'card__grade4':
+                    updateStars('star1', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star2', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star3', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star4', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star5', 'fa-regular fa-star', '#7e7e7e');
+                    break;
+                case 'card__grade5':
+                    updateStars('star1', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star2', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star3', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star4', 'fa-solid fa-star active', '#ffd700');
+                    updateStars('star5', 'fa-solid fa-star active', '#ffd700');
+                    break;
+                    // Adicione mais casos conforme necessário
+                default:
+                    console.log("Nenhum caso correspondente");
+            }
+        }
+
+        function updateStars(elementId, className, color) {
+            const starElement = document.getElementById(elementId);
+            if (starElement) {
+                starElement.className = className;
+                starElement.style.color = color;
+            } else {
+                console.error("Elemento não encontrado com ID: " + elementId);
+            }
+        }
+
+        const cards = document.querySelectorAll('.card__grade');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                toggleCard(this);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let cardGradeButtons = document.querySelectorAll('.card__grade');
+            let resposta1Buttons = document.querySelectorAll('.resposta1');
+            let resposta2Buttons = document.querySelectorAll('.resposta2');
+            let respostaOcultaButtons = document.querySelectorAll('.respostaOculta');
+
+            cardGradeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    toggleButton(this, cardGradeButtons);
+                    checkConditions();
+                });
+            });
+
+            resposta1Buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    toggleButton(this, resposta1Buttons);
+                    checkConditions();
+                    checkConditionsPremium();
+                });
+            });
+
+            resposta2Buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    toggleButton(this, resposta2Buttons);
+                    checkConditions();
+                    checkConditionsPremium();
+                });
+            });
+
+            respostaOcultaButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    toggleButton(this, respostaOcultaButtons);
+                    checkConditionsPremium();
+                });
+            });
+
+            function toggleButton(clickedButton, buttons) {
+                buttons.forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+
+                clickedButton.classList.add('active');
+            }
+
+            function checkConditions() {
+                const enviarRespostaButton = document.getElementById('enviarResposta');
+
+                const cardGradeActive = document.querySelector('.card__grade.active');
+                const resposta1Active = document.querySelector('.resposta1.active');
+                const resposta2Active = document.querySelector('.resposta2.active');
+
+                if (enviarRespostaButton && cardGradeActive && resposta1Active && resposta2Active) {
+                    enviarRespostaButton.removeAttribute('disabled');
+                    enviarRespostaButton.classList.add('active');
+                }
+            }
+
+            function checkConditionsPremium() {
+                const enviarRespostaButton = document.getElementById('enviarResposta');
+
+                const respostaOcultaActive = document.querySelector('.respostaOculta.active');
+                const resposta1Active = document.querySelector('.resposta1.active');
+                const resposta2Active = document.querySelector('.resposta2.active');
+
+                if (enviarRespostaButton && respostaOcultaActive && resposta1Active && resposta2Active) {
+                    enviarRespostaButton.removeAttribute('disabled');
+                    enviarRespostaButton.classList.add('active');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let data = new Date();
+
+            var date = data.getDate();
+            var month = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro",
+                "outubro", "novembro", "dezembro"
+            ][data.getMonth()];
+            var year = data.getFullYear();
+
+            $('#todayDate').html(`${date} de ${month} de ${year}**`);
+        });
+    </script>
+            </div>
+            <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="w-100 text-center text-dark fs-6 p-2 rounded">
+                            <b>Parabéns </b>!<br>Seu cadastro foi realizado com sucesso.
+                            <br>Comece a <b>avaliar</b> as músicas e <b>ganhe</b> dinheiro!
+                        </p>
+                        <p class="w-100 text-center text-dark fs-6 p-2 rounded mt-2">
+                            Você ganhou <b>R$ 25,00</b> por ter se cadastrado!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="overlayPopUp" style="display: none"></div>
+    <div class="popup-container" id="popup" style="display: none;">
+        <div class="row justify-content-center">
+            <img src="https://th.bing.com/th/id/OIP.Rc3WskqR3WWj_EH2k1auOQHaHC?rs=1&pid=ImgDetMain" alt="Ganhou!" class="mb-3" style="width: 60%">
+        </div>
+        <span class="popup-text" style="font-size: 20px;">Saldo atualizado!</span>
+        <span class="popup-text" style="font-size: 20px;">Você recebeu:</span>
+        <span class="popup-text" id="popup-valor"
+            style="font-size: 40px; font-weight: bold; font-family: 'Montserrat', sans-serif; margin-top: -20px;">R$
+            69,00</span>
+        <span class="popup-text" style="font-size: 20px;">pela avaliação</span>
+    </div>
+    <script>
+        let modal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+        modal.show();
+    </script>
+    </body>
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+<!-- contact email pendragoNdev@proton.me -->
+
+</html>
